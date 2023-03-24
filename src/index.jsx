@@ -5,6 +5,11 @@ import Experience from './Experience.jsx'
 
 const root = ReactDOM.createRoot(document.querySelector('#root'))
 
+window.addEventListener('load', () => {
+    const loader = document.querySelector('.loader-container');
+    loader.classList.add('hidden');
+});
+
 root.render(
     <Canvas
         camera={ {

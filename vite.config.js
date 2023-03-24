@@ -20,5 +20,17 @@ export default {
         outDir: '../dist',
         emptyOutDir: true,
         sourcemap: true
-    }
+    },
+    resolve: {
+        extensions: ['.js', '.jsx', '.json', '.node'],
+    },
+    module: {
+        rules: [
+          // ...
+        {
+            test: /\.node$/,
+            use: 'node-loader',
+        },
+        ],
+    },
 }
